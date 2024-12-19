@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מאיר את הלב - תרומות</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #ff6b6b 0%, #ffc107 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Hero section */
+        .hero {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGgxNDQwdjUwMEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDUwYzgwIDAgMTIwIDUwIDIwMCA1MHMxMjAtNTAgMjAwLTUwIDEyMCA1MCAyMDAgNTAgMTIwLTUwIDIwMC01MCAxMjAgNTAgMjAwIDUwIDEyMC01MCAyMDAtNTAgMTIwIDUwIDIwMCA1MCAxMjAtNTAgMjAwLTUwIDEyMCA1MCAyMDAgNTAgNDAuNjY3LTE2LjY2NyA4MC0xNi42NjdWNTAwSDB6IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiLz48L3N2Zz4=');
+            opacity: 0.1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Video section */
+        .video-container {
+            max-width: 800px;
+            margin: -3rem auto 2rem;
+            position: relative;
+            z-index: 2;
+            padding: 0 1rem;
+        }
+
+        .video-wrapper {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Cards grid */
+        .donations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .donation-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .donation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .card-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .donate-button {
+            display: inline-block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .donate-button:hover {
+            transform: scale(1.02);
+        }
+
+        /* Poem section */
+        .poem {
+            background: #fafafa;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .poem h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .poem-content {
+            max-width: 800px;
+            margin: 0 auto;
+            white-space: pre-line;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info a {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-size: 1.25rem;
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .donations-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>מאיר את הלב</h1>
+        <p>אנחנו שרים ביחד את האלף בית, מדמיינים את האותיות מתעופפות בין חדרי הכלא.
+           קוראים יחד שמע ישראל בקול גדול, וצועקים בכל הכוח עד שישברו קירות הכלא, של הלב.</p>
+    </header>
+
+    <div class="video-container">
+        <div class="video-wrapper">
+            <!-- כאן מגיע קוד הוידאו שלך -->
+            <div style="padding-top: 56.25%; background: #eee; position: relative;">
+                <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">מקום לוידאו</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="donations-grid">
+        <!-- נשמה אחת -->
+        <div class="donation-card">
+            <div class="card-image" style="background-image: url('/api/placeholder/400/320')"></div>
+            <div class="card-content">
+                <h3>נשמה אחת</h3>
+                <div class="price">18 ש"ח</div>
+                <p>תומכים בפעילות של מפגש אחד לאסיר אחד, בו אני מגיע עם מוזיקה, תפילות ושיחות מהלב.</p>
+                <a href="#" class="donate-button">לתרומה</a>
+            </div>
+        </div>
+
+        <!-- 5 נשמות -->
+        <div class="donation-card">
+            <div class="card-image" style="background-image: url('/api/placeholder/400/320')"></div>
+            <div class="card-content">
+                <h3>5 נשמות</h3>
+                <div class="price">90 ש"ח</div>
+                <p>תומכים בחמישה אסירים, ומעניקים להם את האפשרות להשתתף במפגש מלא אור, תקווה ותפילה.</p>
+                <a href="#" class="donate-button">לתרומה</a>
+            </div>
+        </div>
+
+        <!-- 10 נשמות -->
+        <div class="donation-card">
+            <div class="card-image" style="background-image: url('/api/placeholder/400/320')"></div>
+            <div class="card-content">
+                <h3>10 נשמות</h3>
+                <div class="price">180 ש"ח</div>
+                <p>תרומה שתומכת בקבוצה גדולה יותר, ומאפשרת לי להרחיב את הפעילות.</p>
+                <a href="#" class="donate-button">לתרומה</a>
+            </div>
+        </div>
+
+        <!-- 20 נשמות -->
+        <div class="donation-card">
+            <div class="card-image" style="background-image: url('/api/placeholder/400/320')"></div>
+            <div class="card-content">
+                <h3>20 נשמות</h3>
+                <div class="price">360 ש"ח</div>
+                <p>עוזרים לתמוך בקבוצה גדולה של אסירים, להביא אור ללבבות שזקוקים לו כל כך.</p>
+                <a href="#" class="donate-button">לתרומה</a>
+            </div>
+        </div>
+
+        <!-- תרומה חופשית -->
+        <div class="donation-card">
+            <div class="card-image" style="background-image: url('/api/placeholder/400/320')"></div>
+            <div class="card-content">
+                <h3>תרומה חופשית</h3>
+                <div class="price">לבחירתך</div>
+                <p>כל סכום שתבחרו יכול להאיר נשמות נוספות ולעזור לי להמשיך להכניס אור לכל פינה חשוכה.</p>
+                <a href="#" class="donate-button">לתרומה</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="poem">
+        <h2>יש לי פרצוף</h2>
+        <div class="poem-content">
+            יש לי פרצוף ואתם שולחים אותו לכלא
+            אל מאחורי הסורגים
+            שם יש אנשים שסגורים חודשים או שנים
+            ואני מאיר להם פנים
+            אני שר להם מהלב שלי
+            מתפלל עליהם בקול ביחד...
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <h3>ליצירת קשר</h3>
+            <a href="mailto:meir.hatov@gmail.com">meir.hatov@gmail.com</a>
+            <p>טלפון: 052-6518168</p>
+        </div>
+    </footer>
+</body>
+</html>
